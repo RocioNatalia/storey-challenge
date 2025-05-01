@@ -1,3 +1,45 @@
 <div class="selector">
-  {{selectorInformation.address}}
+  <div class="selector__header">
+    <div class="selector__title">
+      {{ selectorInformation.address }}
+    </div>
+    <div class="subtitle">
+      NIS: {{ selectorInformation.nis }} | Alias :
+      {{ selectorInformation.alias }}
+    </div>
+  </div>
+
+  <div class="suppliers">
+    <div
+      *ngIf="selectorInformation.supplies.length > 3"
+      class="suppliers__search"
+    >
+      <div class="suppliers__search__title">Encontra mas rapido</div>
+      <div class="suppliers__search__subtitle">
+        Selecciona un suministro para asociar a la dirección
+      </div>
+
+      <input
+        type="text"
+        [(ngModel)]="filterText"
+        class="suppliers__search__input"
+        placeholder="Buscar suministro..."
+      />
+    </div>
+
+    <div class="suppliers__list">
+      <div
+        class="suppliers__item"
+        *ngFor="let supplier of filteredSupplies(selectorInformation.supplies)"
+      >
+        <div class="suppliers__item__title">Suministro Asociado:</div>
+        <div class="suppliers__item__address">
+          {{ supplier.address }}
+        </div>
+        <div class="suppliers__item__location">
+          Localidad : {{ supplier.location }} | Alias : {{ supplier.alias }}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

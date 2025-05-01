@@ -30,6 +30,37 @@ export const list: Selector[] = [
         alias: "Medidor de gas"
       }
     ]
+  },
+  {
+    address: "Calle del Sol 456",
+    nis: 1003,
+    alias: "Casa de vacaciones",
+    supplies: [
+      {
+        name: "Agua",
+        address: "Calle del Sol 456",
+        location: "Jardín",
+        alias: "Llave de paso"
+      },
+      {
+        name: "Electricidad",
+        address: "Calle del Sol 456",
+        location: "Sala",
+        alias: "Interruptor principal"
+      },
+      {
+        name: "Gas",
+        address: "Calle del Sol 456",
+        location: "Cocina",
+        alias: "Medidor de gas"
+      },
+      {
+        name: "Internet",
+        address: "Calle del Sol 456",
+        location: "Oficina",
+        alias: "Router"
+      }
+    ]
   }
 ];
 

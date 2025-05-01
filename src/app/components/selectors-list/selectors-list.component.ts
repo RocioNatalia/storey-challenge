@@ -16,6 +16,5 @@ export class SelectorsListComponent implements OnInit {
 
   ngOnInit(): void {
     this.selectorsList = this.selectorListService.getSelectorsList();
-    console.log(this.selectorsList)
   }
 }
